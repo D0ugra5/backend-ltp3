@@ -5,11 +5,6 @@ from flask import send_from_directory
 app = flask.Flask(__name__)
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return '22223'
-
-
 @app.route('/')
 @app.route('/home')
 def home():
