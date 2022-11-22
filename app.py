@@ -21,6 +21,12 @@ collection_name = dbname["testColletion"]
 client.get
 
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/favicon.png')
+
+
 def procuraLivros():
     complaits = []
     resp = dbname.testColletion.find()
@@ -29,12 +35,6 @@ def procuraLivros():
         complaits.append(item)
 
     return complaits
-
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/favicon.png')
 
 
 @app.route('/')
