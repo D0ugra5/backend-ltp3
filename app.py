@@ -18,6 +18,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.secret_key = 'ItIsASecret'
-    app.debug = True
-    app.run()
+    app.run(debug=True)
