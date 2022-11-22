@@ -30,6 +30,7 @@ def procuraLivros():
     return complaits
 
 
+@app.route("/")
 @app.route('/complaits', methods=['GET'])
 @cross_origin()
 def obter_livros():
