@@ -1,1 +1,1 @@
-web: gunicorn dembele:app --log-file -
+web: python app.py runserver 0.0.0.0:5000
