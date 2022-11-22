@@ -1,7 +1,8 @@
-from flask import Flask, jsonify, Response, request
+from flask import Flask, jsonify, Response, request, send_from_directory
 import pymongo
 
 from bson.objectid import ObjectId
+import os
 from bson import json_util
 import json
 from flask_cors import CORS, cross_origin
@@ -28,6 +29,12 @@ def procuraLivros():
         complaits.append(item)
 
     return complaits
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/favicon.png')
 
 
 @app.route('/complaits', methods=['GET'])
