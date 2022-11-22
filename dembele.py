@@ -31,6 +31,7 @@ def procuraLivros():
     return complaits
 
 
+@cross_origin()
 @app.route('/')
 @app.route('/complaits', methods=['GET'])
 @cross_origin()
