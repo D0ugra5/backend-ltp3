@@ -89,4 +89,7 @@ def delete_complaint(id):
     return jsonify({'erro': 'complait não encontrado'})
 
 
-app.run()
+if __name__ == "__main__":
+    app.secret_key = 'ItIsASecret'
+    app.debug = True
+    app.run()
