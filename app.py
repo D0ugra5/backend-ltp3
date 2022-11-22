@@ -37,6 +37,7 @@ def favicon():
                                'favicon.ico', mimetype='image/favicon.png')
 
 
+@app.route('/')
 @app.route('/complaits', methods=['GET'])
 @cross_origin()
 def obter_livros():
