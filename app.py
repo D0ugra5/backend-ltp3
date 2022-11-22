@@ -81,4 +81,4 @@ def delete_complaint(id):
     return jsonify({'erro': 'complait não encontrado'})
 
 
-app.run(port=5000, host='localhost', debug=True)
+app.run()
